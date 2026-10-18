@@ -1,3 +1,14 @@
+svg {
+  cursor: pointer;
+}
+
+/* ================================
+  PERFIL
+================================ */
+.profile {
+  cursor: pointer;
+}
+
 /* ================================
    MAIN
 ================================ */
@@ -52,6 +63,14 @@
   color: var(--text-light);
 
   font-size: 13px;
+}
+
+.header-right {
+  .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* ================================
