@@ -81,7 +81,7 @@
       <section class="card student-form-card">
         <!-- Título do formulário -->
         <div class="card-title">
-          <h2>Novo Aluno</h2>
+          <h2 id="titulo-formulario">Novo Aluno</h2>
         </div>
 
         <!-- Formulário -->
@@ -113,6 +113,8 @@
               required
               placeholder="Digite seu CPF"
               type="text"
+              inputmode="numeric"
+              autocomplete="off"
               id="form_cpf"
             />
           </div>
@@ -150,6 +152,7 @@
               required
               placeholder="Digite seu telefone"
               type="text"
+              inputmode="numeric"
               id="form_telefone"
             />
           </div>
@@ -162,6 +165,7 @@
               required
               placeholder="Digite seu CEP"
               type="text"
+              inputmode="numeric"
               id="form_cep"
             />
           </div>
@@ -176,7 +180,15 @@
           <!-- Botão de cadastro -->
           <div class="form-actions">
             <button type="submit" class="btn-primary" id="form_btn">
-              💾 &nbsp; Cadastrar Aluno
+              Cadastrar Aluno
+            </button>
+            <button
+              type="button"
+              class="btn-secondary"
+              id="cancelar-edicao"
+              hidden
+            >
+              Cancelar
             </button>
           </div>
         </form>
@@ -293,6 +305,8 @@
         <small>Versão 1.0.0</small>
       </footer>
     </main>
+    <script src="./modal.js"></script>
     <script src="./script.js"></script>
+    <script src="./teste-flutuante.js"></script>
   </body>
 </html>

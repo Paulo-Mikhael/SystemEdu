@@ -186,6 +186,7 @@
 
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
 
   margin-top: 2px;
 }
@@ -216,6 +217,26 @@
   background: var(--cyan-dark);
 
   transform: translateY(-1px);
+}
+
+.btn-secondary {
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #52657d;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+}
+
+.btn-secondary[hidden] {
+  display: none;
 }
 
 /* ================================
@@ -632,9 +653,11 @@
 
   .form-actions {
     justify-content: stretch;
+    flex-direction: column-reverse;
   }
 
-  .btn-primary {
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
   }
 
