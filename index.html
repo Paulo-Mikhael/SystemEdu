@@ -1,145 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Edu - Gestão Acadêmica</title>
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="alunos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>System Edu - Gestão Acadêmica</title>
-  <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="alunos.css">
-</head>
-
-<body>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-
-    <div class="logo">
-      <div class="logo-icon">
-        <img src="imagens/logo.png" alt="Logo do System Edu">
-      </div>
-      <div>
-        <h1>System Edu</h1>
-        <span>Gestão Acadêmica</span>
-      </div>
-    </div>
-
-    <nav class="menu">
-
-      <a href="#" class="menu-item active">
-        <span class="menu-icon">♙</span>
-        Turmas e Alunos
-      </a>
-
-    </nav>
-
-    <div class="storage">
-      <div class="storage-icon">▤</div>
-      <div>
-        <strong>Dados salvos localmente</strong>
-        <small>via <b>LocalStorage</b></small>
-      </div>
-      <span class="check">✓</span>
-    </div>
-
-  </aside>
-
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="main">
-
-    <!-- HEADER -->
-    <header class="header">
-
-      <button class="hamburger">☰</button>
-
-      <div class="header-right">
-
-        <div class="notification">
-          ♧
-          <span>3</span>
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="imagens/logo.png" alt="Logo do System Edu" />
         </div>
+        <div>
+          <h1>System Edu</h1>
+          <span>Gestão Acadêmica</span>
+        </div>
+      </div>
 
-        <div class="moon">☾</div>
+      <nav class="menu">
+        <a href="#" class="menu-item active">
+          <span class="menu-icon">♙</span>
+          Turmas e Alunos
+        </a>
+      </nav>
 
-        <div class="profile">
-          <div class="avatar">●</div>
+      <div class="storage">
+        <div class="storage-icon">▤</div>
+        <div>
+          <strong>Dados salvos localmente</strong>
+          <small>via <b>LocalStorage</b></small>
+        </div>
+        <span class="check">✓</span>
+      </div>
+    </aside>
 
-          <div class="profile-info">
-            <strong>Usuário</strong>
-            <small>Estudante</small>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main">
+      <!-- HEADER -->
+      <header class="header">
+        <button class="hamburger">☰</button>
+
+        <div class="header-right">
+          <div class="notification">
+            ♧
+            <span>3</span>
           </div>
 
-          <span>⌄</span>
+          <div class="moon">☾</div>
+
+          <div class="profile">
+            <div class="avatar">●</div>
+
+            <div class="profile-info">
+              <strong>Usuário</strong>
+              <small>Estudante</small>
+            </div>
+
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="page-header">
+        <div class="page-icon">👥</div>
+
+        <div>
+          <h1>Cadastro de Alunos</h1>
+
+          <p>Cadastre novos alunos e gerencie suas informações acadêmicas.</p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         FORMULÁRIO DE CADASTRO
+    =========================================== -->
+
+      <section class="card student-form-card">
+        <!-- Título do formulário -->
+        <div class="card-title">
+          <h2>Novo Aluno</h2>
         </div>
 
-      </div>
+        <!-- Formulário -->
+        <form id="formCadastro" class="student-form">
+          <!-- Nome -->
+          <div class="form-group">
+            <label for="nome"> Nome </label>
 
-    </header>
+            <input
+              placeholder="Digite seu nome completo"
+              type="text"
+              id="form_nome"
+            />
+          </div>
 
-        <H1>Cadastro de Aluno</H1>
-    <form class="student-form" id="formCadastro">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome completo">
+          <!-- Data de nascimento -->
+          <div class="form-group">
+            <label for="data_nascimento"> Data de nascimento </label>
 
-        <label for="data_nascimento"> Data de nascimento:</label>
-        <input type="date" id="data_nascimento" placeholder="Digite sua data de nascimento">
+            <input type="date" id="form_data_nascimento" />
+          </div>
 
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" placeholder="Digite seu CPF">
+          <!-- CPF -->
+          <div class="form-group">
+            <label for="cpf"> CPF </label>
 
-        <label for="sexo">Sexo:</label>
+            <input placeholder="Digite seu CPF" type="text" id="form_cpf" />
+          </div>
 
-        <select id="sexo">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-        </select>
+          <!-- Sexo -->
+          <div class="form-group">
+            <label for="sexo"> Sexo </label>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail">
+            <select id="form_sexo">
+              <option value="">Selecione o sexo</option>
 
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" placeholder="Digite seu telefone">
+              <option value="masculino">Masculino</option>
 
-        <label for="cep">Cep:</label>
-        <input type="text" id="cep" placeholder="Digite seu Cep">
+              <option value="feminino">Feminino</option>
+            </select>
+          </div>
 
-        <label for="data_matricula">Data de matrícula:</label>
-        <input type="date" id="data_matricula" placeholder="Digite a data de matrícula">
+          <!-- E-mail -->
+          <div class="form-group">
+            <label for="email"> E-mail </label>
 
-        <button type="submit">Cadastrar</button>
-</form>
+            <input
+              placeholder="Digite seu e-mail"
+              type="email"
+              id="form_email"
+            />
+          </div>
 
-<table>
-    <tr>
-        <th>Nome</th>
+          <!-- Telefone -->
+          <div class="form-group">
+            <label for="telefone"> Telefone </label>
 
-        <th>Data de nascimento</th>
-        
-        <th>CPF</th>
-        
-        <th>Sexo</th>
-        
-        <th>E-mail</th>
-        
-        <th>Telefone</th>
-        
-        <th>Cep</th>
-        
-        <th>Data de matrícula</th>
-    </tr>
-</table> 
+            <input
+              placeholder="Digite seu telefone"
+              type="text"
+              id="form_telefone"
+            />
+          </div>
 
+          <!-- CEP -->
+          <div class="form-group">
+            <label for="cep"> CEP </label>
 
-    <!-- FOOTER -->
-    <footer>
-      System Edu © 2025 - Todos os dados são armazenados localmente
-      (<span>LocalStorage</span>)
+            <input placeholder="Digite seu CEP" type="text" id="form_cep" />
+          </div>
 
-      <small>Versão 1.0.0</small>
-    </footer>
+          <!-- Data de matrícula -->
+          <div class="form-group">
+            <label for="data_matricula"> Data de matrícula </label>
 
-  </main>
+            <input type="date" id="form_data_matricula" />
+          </div>
 
-</body>
+          <!-- Botão de cadastro -->
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">
+              💾 &nbsp; Cadastrar Aluno
+            </button>
+          </div>
+        </form>
+      </section>
 
+      <!-- ==========================================
+         TABELA DE ALUNOS
+    =========================================== -->
+
+      <section class="card students-card">
+        <!-- Cabeçalho da tabela -->
+        <div class="table-header">
+          <h2>
+            Alunos Cadastrados
+            <span>(0)</span>
+          </h2>
+
+          <!-- Ferramentas da tabela -->
+          <div class="table-tools">
+            <!-- Campo de pesquisa -->
+            <div class="search-box">
+              <span>⌕</span>
+
+              <input
+                type="text"
+                id="buscarAluno"
+                placeholder="Buscar aluno..."
+              />
+            </div>
+
+            <!-- Botão de filtro -->
+            <button type="button" class="btn-filter">⚱ &nbsp; Filtrar</button>
+          </div>
+        </div>
+
+        <!-- ======================================
+             CONTAINER DA TABELA
+        ======================================= -->
+
+        <div class="table-container">
+          <table class="students-table">
+            <!-- Cabeçalho da tabela -->
+            <thead>
+              <tr>
+                <th>Nome</th>
+
+                <th>Data de nascimento</th>
+
+                <th>CPF</th>
+
+                <th>Sexo</th>
+
+                <th>E-mail</th>
+
+                <th>Telefone</th>
+
+                <th>CEP</th>
+
+                <th>Data de matrícula</th>
+
+                <th>Ações</th>
+              </tr>
+            </thead>
+
+            <!--
+                    Corpo da tabela.
+
+                    Os alunos serão adicionados aqui
+                    posteriormente através do JavaScript.
+                -->
+            <tbody id="students-table-body">
+              <td>
+                <div class="student-name">
+                  <div class="student-avatar avatar-pink">E</div>
+
+                  <strong> Eduarda Lima Rocha </strong>
+                </div>
+              </td>
+
+              <td>18/09/2006</td>
+
+              <td>321.654.987-00</td>
+
+              <td>
+                <span class="gender female"> ♀ Feminino </span>
+              </td>
+
+              <td>eduarda.lima@email.com</td>
+
+              <td>(92) 99567-8901</td>
+
+              <td>69040-040</td>
+
+              <td>20/02/2025</td>
+
+              <td>
+                <div class="actions">
+                  <button class="edit">✎</button>
+                  <button class="delete">♜</button>
+                </div>
+              </td>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ======================================
+             RODAPÉ DA TABELA / PAGINAÇÃO
+        ======================================= -->
+
+        <div class="table-footer">
+          <span id="contadorAlunos"> Mostrando 0 alunos </span>
+
+          <!-- Paginação -->
+          <div class="pagination">
+            <button type="button">‹</button>
+
+            <button type="button" class="current">1</button>
+
+            <button type="button">›</button>
+          </div>
+
+          <!-- Quantidade por página -->
+          <select class="per-page">
+            <option value="10">10 por página</option>
+
+            <option value="20">20 por página</option>
+
+            <option value="50">50 por página</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        System Edu © 2025 - Todos os dados são armazenados localmente
+        (<span>LocalStorage</span>)
+
+        <small>Versão 1.0.0</small>
+      </footer>
+    </main>
+  </body>
 </html>
