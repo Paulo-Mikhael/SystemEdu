@@ -92,6 +92,7 @@
             <label for="nome"> Nome </label>
 
             <input
+              required
               placeholder="Digite seu nome completo"
               type="text"
               id="form_nome"
@@ -102,14 +103,19 @@
           <div class="form-group">
             <label for="data_nascimento"> Data de nascimento </label>
 
-            <input type="date" id="form_data_nascimento" />
+            <input required type="date" id="form_data_nascimento" />
           </div>
 
           <!-- CPF -->
           <div class="form-group">
             <label for="cpf"> CPF </label>
 
-            <input placeholder="Digite seu CPF" type="text" id="form_cpf" />
+            <input
+              required
+              placeholder="Digite seu CPF"
+              type="text"
+              id="form_cpf"
+            />
           </div>
 
           <!-- Sexo -->
@@ -130,6 +136,7 @@
             <label for="email"> E-mail </label>
 
             <input
+              required
               placeholder="Digite seu e-mail"
               type="email"
               id="form_email"
@@ -141,6 +148,7 @@
             <label for="telefone"> Telefone </label>
 
             <input
+              required
               placeholder="Digite seu telefone"
               type="text"
               id="form_telefone"
@@ -151,19 +159,24 @@
           <div class="form-group">
             <label for="cep"> CEP </label>
 
-            <input placeholder="Digite seu CEP" type="text" id="form_cep" />
+            <input
+              required
+              placeholder="Digite seu CEP"
+              type="text"
+              id="form_cep"
+            />
           </div>
 
           <!-- Data de matrícula -->
           <div class="form-group">
             <label for="data_matricula"> Data de matrícula </label>
 
-            <input type="date" id="form_data_matricula" />
+            <input required type="date" id="form_data_matricula" />
           </div>
 
           <!-- Botão de cadastro -->
           <div class="form-actions">
-            <button type="submit" class="btn-primary">
+            <button type="submit" class="btn-primary" id="form_btn">
               💾 &nbsp; Cadastrar Aluno
             </button>
           </div>
@@ -179,7 +192,7 @@
         <div class="table-header">
           <h2>
             Alunos Cadastrados
-            <span>(0)</span>
+            <span id="table-count">(0)</span>
           </h2>
 
           <!-- Ferramentas da tabela -->
@@ -230,42 +243,15 @@
             </thead>
 
             <!--
-                    Corpo da tabela.
+                Corpo da tabela.
 
-                    Os alunos serão adicionados aqui
-                    posteriormente através do JavaScript.
-                -->
+                Os alunos serão adicionados aqui
+                posteriormente através do JavaScript.
+            -->
             <tbody id="students-table-body">
-              <td>
-                <div class="student-name">
-                  <div class="student-avatar avatar-pink">E</div>
-
-                  <strong> Eduarda Lima Rocha </strong>
-                </div>
-              </td>
-
-              <td>18/09/2006</td>
-
-              <td>321.654.987-00</td>
-
-              <td>
-                <span class="gender female"> ♀ Feminino </span>
-              </td>
-
-              <td>eduarda.lima@email.com</td>
-
-              <td>(92) 99567-8901</td>
-
-              <td>69040-040</td>
-
-              <td>20/02/2025</td>
-
-              <td>
-                <div class="actions">
-                  <button class="edit">✎</button>
-                  <button class="delete">♜</button>
-                </div>
-              </td>
+              <!-- 
+                ...
+              -->
             </tbody>
           </table>
         </div>
@@ -275,7 +261,7 @@
         ======================================= -->
 
         <div class="table-footer">
-          <span id="contadorAlunos"> Mostrando 0 alunos </span>
+          <span id="contadorAlunos">Mostrando 0 alunos</span>
 
           <!-- Paginação -->
           <div class="pagination">
@@ -305,5 +291,6 @@
         <small>Versão 1.0.0</small>
       </footer>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

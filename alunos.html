@@ -1,0 +1,367 @@
+<!-- ==========================================
+         CABEÇALHO DA PÁGINA
+    =========================================== -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Edu - Gestão Acadêmica</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="alunos.css">
+</head>
+
+<body>
+    <section class="page-header">
+
+        <div class="page-icon">
+            👥
+        </div>
+
+        <div>
+            <h1>Cadastro de Alunos</h1>
+
+            <p>
+                Cadastre novos alunos e gerencie suas informações acadêmicas.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FORMULÁRIO DE CADASTRO
+    =========================================== -->
+
+    <section class="card student-form-card">
+
+        <!-- Título do formulário -->
+        <div class="card-title">
+            <h2>Novo Aluno</h2>
+        </div>
+
+
+        <!-- Formulário -->
+        <form id="formCadastro" class="student-form">
+
+
+            <!-- Nome -->
+            <div class="form-group">
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input placeholder="Digite seu nome completo" type="text" id="form_nome">
+
+            </div>
+
+
+            <!-- Data de nascimento -->
+            <div class="form-group">
+
+                <label for="data_nascimento">
+                    Data de nascimento
+                </label>
+
+                <input type="date" id="form_data_nascimento">
+
+            </div>
+
+
+            <!-- CPF -->
+            <div class="form-group">
+
+                <label for="cpf">
+                    CPF
+                </label>
+
+                <input placeholder="Digite seu CPF" type="text" id="form_cpf">
+
+            </div>
+
+
+            <!-- Sexo -->
+            <div class="form-group">
+
+                <label for="sexo">
+                    Sexo
+                </label>
+
+                <select id="form_sexo">
+
+                    <option value="">
+                        Selecione o sexo
+                    </option>
+
+                    <option value="masculino">
+                        Masculino
+                    </option>
+
+                    <option value="feminino">
+                        Feminino
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- E-mail -->
+            <div class="form-group">
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input placeholder="Digite seu e-mail" type="email" id="form_email">
+
+            </div>
+
+
+            <!-- Telefone -->
+            <div class="form-group">
+
+                <label for="telefone">
+                    Telefone
+                </label>
+
+                <input placeholder="Digite seu telefone" type="text" id="form_telefone">
+
+            </div>
+
+
+            <!-- CEP -->
+            <div class="form-group">
+
+                <label for="cep">
+                    CEP
+                </label>
+
+                <input placeholder="Digite seu CEP" type="text" id="form_cep">
+
+            </div>
+
+
+            <!-- Data de matrícula -->
+            <div class="form-group">
+
+                <label for="data_matricula">
+                    Data de matrícula
+                </label>
+
+                <input type="date" id="form_data_matricula">
+
+            </div>
+
+
+            <!-- Botão de cadastro -->
+            <div class="form-actions">
+
+                <button type="submit" class="btn-primary">
+                    💾 &nbsp; Cadastrar Aluno
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         TABELA DE ALUNOS
+    =========================================== -->
+
+    <section class="card students-card">
+
+
+        <!-- Cabeçalho da tabela -->
+        <div class="table-header">
+
+            <h2>
+                Alunos Cadastrados
+                <span>(0)</span>
+            </h2>
+
+
+            <!-- Ferramentas da tabela -->
+            <div class="table-tools">
+
+                <!-- Campo de pesquisa -->
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input type="text" id="buscarAluno" placeholder="Buscar aluno...">
+
+                </div>
+
+
+                <!-- Botão de filtro -->
+                <button type="button" class="btn-filter">
+                    ⚱ &nbsp; Filtrar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             CONTAINER DA TABELA
+        ======================================= -->
+
+        <div class="table-container">
+
+            <table class="students-table">
+
+                <!-- Cabeçalho da tabela -->
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Nome
+                        </th>
+
+                        <th>
+                            Data de nascimento
+                        </th>
+
+                        <th>
+                            CPF
+                        </th>
+
+                        <th>
+                            Sexo
+                        </th>
+
+                        <th>
+                            E-mail
+                        </th>
+
+                        <th>
+                            Telefone
+                        </th>
+
+                        <th>
+                            CEP
+                        </th>
+
+                        <th>
+                            Data de matrícula
+                        </th>
+
+                        <th>
+                            Ações
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <!--
+                    Corpo da tabela.
+
+                    Os alunos serão adicionados aqui
+                    posteriormente através do JavaScript.
+                -->
+                <tbody id="students-table-body">
+
+                    <td>
+                        <div class="student-name">
+                            <div class="student-avatar avatar-pink">
+                                E
+                            </div>
+
+                            <strong>
+                                Eduarda Lima Rocha
+                            </strong>
+                        </div>
+                    </td>
+
+                    <td>18/09/2006</td>
+
+                    <td>321.654.987-00</td>
+
+                    <td>
+                        <span class="gender female">
+                            ♀
+                            Feminino
+                        </span>
+                    </td>
+
+                    <td>eduarda.lima@email.com</td>
+
+                    <td>(92) 99567-8901</td>
+
+                    <td>69040-040</td>
+
+                    <td>20/02/2025</td>
+
+                    <td>
+                        <div class="actions">
+                            <button class="edit">✎</button>
+                            <button class="delete">♜</button>
+                        </div>
+                    </td>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- ======================================
+             RODAPÉ DA TABELA / PAGINAÇÃO
+        ======================================= -->
+
+        <div class="table-footer">
+
+            <span id="contadorAlunos">
+                Mostrando 0 alunos
+            </span>
+
+
+            <!-- Paginação -->
+            <div class="pagination">
+
+                <button type="button">
+                    ‹
+                </button>
+
+                <button type="button" class="current">
+                    1
+                </button>
+
+                <button type="button">
+                    ›
+                </button>
+
+            </div>
+
+
+            <!-- Quantidade por página -->
+            <select class="per-page">
+
+                <option value="10">
+                    10 por página
+                </option>
+
+                <option value="20">
+                    20 por página
+                </option>
+
+                <option value="50">
+                    50 por página
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+</body>

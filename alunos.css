@@ -12,7 +12,6 @@
   color: var(--text);
 }
 
-
 /* ================================
    CABEÇALHO DA PÁGINA
 ================================ */
@@ -55,7 +54,6 @@
   font-size: 13px;
 }
 
-
 /* ================================
    CARD
 ================================ */
@@ -71,7 +69,6 @@
 
   overflow: hidden;
 }
-
 
 /* ================================
    TÍTULO DO CARD
@@ -107,7 +104,6 @@
   background: var(--cyan);
 }
 
-
 /* ================================
    FORMULÁRIO
 ================================ */
@@ -117,8 +113,7 @@
 
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 18px 22px;
 }
@@ -160,7 +155,9 @@
 
   outline: none;
 
-  transition: border .2s, box-shadow .2s;
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
 }
 
 .form-group input::placeholder {
@@ -171,17 +168,14 @@
 .form-group select:focus {
   border-color: var(--cyan);
 
-  box-shadow:
-    0 0 0 2px rgba(17, 197, 181, .08);
+  box-shadow: 0 0 0 2px rgba(17, 197, 181, 0.08);
 }
-
 
 /* Remove aparência padrão em alguns navegadores */
 
 .form-group input[type="date"] {
   color: #52657d;
 }
-
 
 /* ================================
    BOTÃO DO FORMULÁRIO
@@ -215,7 +209,7 @@
 
   cursor: pointer;
 
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .btn-primary:hover {
@@ -223,7 +217,6 @@
 
   transform: translateY(-1px);
 }
-
 
 /* ================================
    CABEÇALHO DA TABELA
@@ -252,7 +245,6 @@
 
   font-weight: normal;
 }
-
 
 /* ================================
    FERRAMENTAS
@@ -305,7 +297,6 @@
   color: #a1adbd;
 }
 
-
 .btn-filter {
   height: 36px;
 
@@ -329,7 +320,6 @@
 .btn-filter:hover {
   background: var(--cyan-dark);
 }
-
 
 /* ================================
    TABELA
@@ -380,13 +370,12 @@
 }
 
 .students-table tbody tr {
-  transition: background .15s;
+  transition: background 0.15s;
 }
 
 .students-table tbody tr:hover {
   background: #f8fbfc;
 }
-
 
 /* ================================
    NOME DO ALUNO
@@ -407,7 +396,6 @@
 
   font-size: 11px;
 }
-
 
 /* ================================
    AVATAR
@@ -452,7 +440,6 @@
   background: var(--pink);
 }
 
-
 /* ================================
    SEXO
 ================================ */
@@ -465,6 +452,8 @@
   gap: 5px;
 
   font-size: 10px;
+
+  text-transform: capitalize;
 }
 
 .gender.female {
@@ -474,7 +463,6 @@
 .gender.male {
   color: #1683df;
 }
-
 
 /* ================================
    AÇÕES
@@ -500,7 +488,7 @@
 
   font-size: 13px;
 
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .actions .edit {
@@ -512,11 +500,10 @@
 }
 
 .actions button:hover {
-  filter: brightness(.9);
+  filter: brightness(0.9);
 
   transform: translateY(-1px);
 }
-
 
 /* ================================
    RODAPÉ DA TABELA
@@ -537,7 +524,6 @@
 
   font-size: 10px;
 }
-
 
 /* ================================
    PAGINAÇÃO
@@ -584,7 +570,6 @@
   font-weight: bold;
 }
 
-
 /* ================================
    ITENS POR PÁGINA
 ================================ */
@@ -607,23 +592,17 @@
   outline: none;
 }
 
-
 /* ================================
    RESPONSIVIDADE
 ================================ */
 
 @media (max-width: 1200px) {
-
   .student-form {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
-
 @media (max-width: 850px) {
-
   .main {
     margin-left: 70px;
   }
@@ -644,12 +623,9 @@
 
     gap: 12px;
   }
-
 }
 
-
 @media (max-width: 600px) {
-
   .student-form {
     grid-template-columns: 1fr;
   }
@@ -677,12 +653,9 @@
 
     gap: 15px;
   }
-
 }
 
-
 @media (max-width: 450px) {
-
   .main {
     margin-left: 0;
   }
@@ -702,5 +675,4 @@
   .btn-filter {
     width: 100%;
   }
-
 }
