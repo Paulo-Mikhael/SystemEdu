@@ -90,6 +90,10 @@
   padding-bottom: 12px;
 }
 
+.student-form-card .card-title h2 {
+  font-size: 26px;
+}
+
 .card-title h3::after {
   content: "";
 
@@ -126,7 +130,7 @@
 .form-group label {
   margin-bottom: 7px;
 
-  font-size: 11px;
+  font-size: 13px;
 
   font-weight: bold;
 
@@ -151,7 +155,7 @@
 
   font-family: inherit;
 
-  font-size: 11px;
+  font-size: 13px;
 
   outline: none;
 
@@ -204,7 +208,7 @@
 
   color: white;
 
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: bold;
 
@@ -226,7 +230,7 @@
   border-radius: 6px;
   background: #fff;
   color: #52657d;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -258,7 +262,7 @@
 }
 
 .table-header h3 {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .table-header h3 span {
@@ -296,7 +300,7 @@
 }
 
 .search-box span {
-  font-size: 20px;
+  font-size: 22px;
 
   color: #718096;
 }
@@ -309,7 +313,7 @@
 
   font-family: inherit;
 
-  font-size: 11px;
+  font-size: 13px;
 
   color: var(--text);
 }
@@ -331,7 +335,7 @@
 
   color: white;
 
-  font-size: 11px;
+  font-size: 13px;
 
   font-weight: bold;
 
@@ -373,7 +377,7 @@
 
   color: #53657d;
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: bold;
 }
@@ -387,7 +391,7 @@
 
   color: #52657d;
 
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .students-table tbody tr {
@@ -415,7 +419,7 @@
 .student-name strong {
   color: var(--text);
 
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* ================================
@@ -436,7 +440,7 @@
 
   color: white;
 
-  font-size: 12px;
+  font-size: 14px;
 
   font-weight: bold;
 }
@@ -472,7 +476,7 @@
 
   gap: 5px;
 
-  font-size: 10px;
+  font-size: 12px;
 
   text-transform: capitalize;
 }
@@ -507,7 +511,7 @@
 
   cursor: pointer;
 
-  font-size: 13px;
+  font-size: 15px;
 
   transition: 0.2s;
 }
@@ -543,7 +547,7 @@
 
   color: var(--text-light);
 
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /* ================================
@@ -572,7 +576,7 @@
 
   cursor: pointer;
 
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .pagination button:hover {
@@ -608,7 +612,7 @@
 
   color: #52657d;
 
-  font-size: 10px;
+  font-size: 12px;
 
   outline: none;
 }
