@@ -47,6 +47,15 @@ function escaparHtml(valor) {
   );
 }
 
+function excluirAluno(linha) {
+  if (linha === linhaEmEdicao) {
+    cancelarEdicao();
+  }
+  linha.remove();
+  registros--;
+  atualizarContadores();
+}
+
 formCpf.addEventListener("input", () => {
   const digitos = formCpf.value.replace(/\D/g, "").slice(0, 11);
   formCpf.value = digitos
@@ -83,12 +92,24 @@ tableBody.addEventListener("click", (evt) => {
   if (!linha) return;
 
   if (botao.classList.contains("delete")) {
-    if (linha === linhaEmEdicao) {
-      cancelarEdicao();
-    }
-    linha.remove();
-    registros--;
-    atualizarContadores();
+    let confirmacao;
+    confirmacao = modal(
+      "Confirmação",
+      "Deseja realmente excluir este aluno? Esta ação não pode ser desfeita.",
+      [
+        {
+          title: "Excluir aluno",
+          onClick: () => {
+            confirmacao.fechar();
+            excluirAluno(linha);
+          },
+        },
+        {
+          title: "Cancelar",
+          onClick: () => confirmacao.fechar(),
+        },
+      ],
+    );
     return;
   }
 
@@ -119,7 +140,26 @@ tableBody.addEventListener("click", (evt) => {
   }
 });
 
-botaoCancelarEdicao.addEventListener("click", cancelarEdicao);
+botaoCancelarEdicao.addEventListener("click", () => {
+  let confirmacao;
+  confirmacao = modal(
+    "Confirmação",
+    "Deseja realmente cancelar a operação atual? As alterações não salvas serão descartadas.",
+    [
+      {
+        title: "Sim, cancelar",
+        onClick: () => {
+          confirmacao.fechar();
+          cancelarEdicao();
+        },
+      },
+      {
+        title: "Continuar editando",
+        onClick: () => confirmacao.fechar(),
+      },
+    ],
+  );
+});
 
 cadastroForm.addEventListener("submit", (evt) => {
   if (linhaEmEdicao && !atualizacaoConfirmada) {
